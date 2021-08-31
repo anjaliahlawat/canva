@@ -7,14 +7,22 @@ module.exports = {
     "airbnb-base",
     "plugin:react/recommended",
     "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended",
   ],
   env: {
     browser: true,
   },
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    ecmaFeatures: {
+      tsx: true,
+    },
+    ecmaVersion: 12,
+  },
   globals: {
     require: true,
   },
-  plugins: ["react", "prettier"],
+  plugins: ["react", "prettier", "@typescript-eslint"],
   settings: {
     react: {
       version: "detect",
