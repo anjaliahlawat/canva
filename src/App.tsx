@@ -1,7 +1,13 @@
-import React from "react";
+import React, { ReactElement } from "react";
+import HomeScreen from "./screens/home/HomeScreen";
+import "./scss/App.scss";
 
-function App() {
-  return <div className="App">Hi</div>;
+function App(): ReactElement {
+  return (
+    <div className="App">
+      <HomeScreen />
+    </div>
+  );
 }
 
 export default App;

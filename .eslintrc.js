@@ -38,5 +38,6 @@ module.exports = {
     "no-use-before-define": OFF,
     "import/extensions": OFF,
     "import/no-unresolved": OFF,
+    "@typescript-eslint/no-var-requires": OFF,
   },
 };
