@@ -1,7 +1,5 @@
 import React, { ReactElement } from "react";
 
-import styles from "./styles";
-
 type ButtonProps = {
   children: JSX.Element;
   onClick: () => void;
@@ -9,12 +7,7 @@ type ButtonProps = {
 
 function ButtonComponent({ children, onClick }: ButtonProps): ReactElement {
   return (
-    <button
-      type="button"
-      onClick={onClick}
-      className="button button-hover"
-      style={styles.button}
-    >
+    <button type="button" onClick={onClick} className="button button-hover">
       {children}
     </button>
   );

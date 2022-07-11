@@ -1,26 +1,16 @@
 import React, { ReactElement } from "react";
 
 import ButtonComponent from "../button/ButtonComponent";
-import circle from "../../assets/shapes/circle.png";
-import square from "../../assets/shapes/square.png";
-import rectangle from "../../assets/shapes/rectangle.png";
-import rhombus from "../../assets/shapes/rhombus.png";
-import styles from "./styles";
-
-const tools = [
-  { tool: "circle", image: circle },
-  { tool: "square", image: square },
-  { tool: "rectangle", image: rectangle },
-  { tool: "rhombus", image: rhombus },
-];
 
 type ButtonGroupProps = {
+  tools: Record<string, string>[];
   selectionTool: string | undefined;
   // eslint-disable-next-line no-unused-vars
   setSelectionTool: (tool: string) => void;
 };
 
 function ButtonGroupComponent({
+  tools,
   selectionTool,
   setSelectionTool,
 }: ButtonGroupProps): ReactElement {
@@ -29,16 +19,12 @@ function ButtonGroupComponent({
   };
 
   return (
-    <div className="d-flex buttonGroup flex-wrap" style={styles.buttonGroup}>
+    <div className="d-flex buttonGroup flex-wrap">
       {tools.map((tool, key) => {
         return (
-          <div className="p-2" key={key}>
+          <div className="p-1" key={key}>
             <ButtonComponent onClick={() => onShapeSelected(tool.tool)}>
-              <img
-                className="shapeImage"
-                src={tool.image}
-                style={styles.shapeImage}
-              />
+              <h6>{tool.icon}</h6>
             </ButtonComponent>
           </div>
         );

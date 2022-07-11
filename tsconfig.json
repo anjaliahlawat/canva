@@ -24,13 +24,14 @@
     "resolveJsonModule": true
   },
   "include": [
-    "src/"
+    "src/",
   ],
   "exclude": [
     "node_modules",
     "build",
     "index.js",
     "reportWebVitals.js",
-    "setupTests.js"
+    "setupTests.js",
+    "canva-old-code",
   ]
 }
