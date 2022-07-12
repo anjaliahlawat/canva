@@ -4,7 +4,7 @@ import ButtonComponent from "../button/ButtonComponent";
 
 type ButtonGroupProps = {
   tools: Record<string, string>[];
-  selectionTool: string | undefined;
+  selectionTool: Array<string | undefined>;
   // eslint-disable-next-line no-unused-vars
   setSelectionTool: (tool: string) => void;
 };
@@ -19,16 +19,22 @@ function ButtonGroupComponent({
   };
 
   return (
-    <div className="d-flex buttonGroup flex-wrap">
-      {tools.map((tool, key) => {
-        return (
-          <div className="p-1" key={key}>
-            <ButtonComponent onClick={() => onShapeSelected(tool.tool)}>
-              <h6>{tool.icon}</h6>
-            </ButtonComponent>
-          </div>
-        );
-      })}
+    <div className="buttonGroup">
+      <div className="d-flex flex-wrap">
+        {tools.map((tool, key) => {
+          return (
+            <div className="p-1" key={key}>
+              <ButtonComponent
+                selectionTool={selectionTool}
+                tool={tool.tool}
+                onClick={() => onShapeSelected(tool.tool)}
+              >
+                <h6>{tool.icon}</h6>
+              </ButtonComponent>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Input } from "reactstrap";
 
 type EditorProps = {
-  selectionTool: string;
+  selectionTool: Array<string | undefined>;
 };
 
 function EditorComponent({ selectionTool }: EditorProps) {
@@ -18,11 +18,13 @@ function EditorComponent({ selectionTool }: EditorProps) {
   const setTextStyle = () => {
     const temp = { ...editorStyle };
 
-    if (selectionTool === "Bold") {
+    if (selectionTool.includes("Bold")) {
       temp.fontWeight = "bold";
-    } else if (selectionTool === "Italic") {
+    }
+    if (selectionTool.includes("Italic")) {
       temp.fontStyle = "italic";
-    } else if (selectionTool === "Underline") {
+    }
+    if (selectionTool.includes("Underline")) {
       temp.textDecorationLine = "underline";
     }
 

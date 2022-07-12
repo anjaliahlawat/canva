@@ -1,7 +1,20 @@
-.button {
+.palette-btn {
   background-color: white;
-  border: 1px solid #bdbdbd;
-  border-radius: 10px;
+  border:none;
+  border-radius: 5px;
   height: 50px;
   width: 50px;
+  box-shadow: 1px 1px 3px #aaaaaa;
+  margin-left: 15px;
+  margin-top: 5px;
+
+  &.active {
+    box-shadow: none;
+
+    h6 {
+      font-size: 18px;
+      font-weight: 700;
+      color: $primary-color;
+    }
+  } 
 }

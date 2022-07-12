@@ -29,10 +29,12 @@ function CanvasComponent(props) {
       icon: "12",
     },
   ];
-  const [selectionTool, setSelectionTool] = useState("");
+  const [selectionTool, setSelectionTool] = useState<Array<string>>([]);
 
   const onSelect = (tool) => {
-    setSelectionTool(tool);
+    const temp: Array<string> = [...selectionTool];
+    temp.push(tool);
+    setSelectionTool(temp);
   };
 
   return (

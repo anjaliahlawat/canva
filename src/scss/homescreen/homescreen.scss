@@ -1,0 +1,18 @@
+.screen-home {
+
+  &_row1 {
+    min-height: 80px;
+    
+    h4 {
+      margin-top: 40px;
+      margin-left: 150px;
+      color: $primary-color;
+      font-family: "Comic Sans MS";
+      font-weight: 600;
+      font-size: 25px;
+    }
+  }
+  // &_row2{
+  //   margin-top: 20px;
+  // }
+}
