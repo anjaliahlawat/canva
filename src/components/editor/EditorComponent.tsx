@@ -12,14 +12,19 @@ function EditorComponent({ selectionTool }: EditorProps) {
   });
 
   useEffect(() => {
-    if (selectionTool === "Bold") {
-      setTextStyle();
-    }
+    setTextStyle();
   }, [selectionTool]);
 
   const setTextStyle = () => {
     const temp = { ...editorStyle };
-    temp.fontWeight = "bold";
+
+    if (selectionTool === "Bold") {
+      temp.fontWeight = "bold";
+    } else if (selectionTool === "Italic") {
+      temp.fontStyle = "italic";
+    } else if (selectionTool === "Underline") {
+      temp.textDecorationLine = "underline";
+    }
 
     setEditorStyle(temp);
   };
