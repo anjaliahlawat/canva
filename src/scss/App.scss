@@ -1,9 +1,7 @@
-@import "./config.scss";
 @import "./buttongroup/buttongroup.scss";
 @import "./button/button.scss";
 @import "./editor/editor.scss";
 @import "./homescreen/homescreen.scss";
-
 
 .button-hover:hover {
   box-shadow: 0px 0px 5px 1px #f5f5f5;
