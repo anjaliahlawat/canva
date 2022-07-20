@@ -24,7 +24,7 @@
     "resolveJsonModule": true
   },
   "include": [
-    "src/",
+    "src/"
   ],
   "exclude": [
     "node_modules",
@@ -32,6 +32,6 @@
     "index.js",
     "reportWebVitals.js",
     "setupTests.js",
-    "canva-old-code",
+    "canva-old-code"
   ]
 }
