@@ -11,22 +11,27 @@ function CanvasComponent(props) {
     {
       tool: "Bold",
       icon: "B",
+      type: "btn",
     },
     {
       tool: "Italic",
       icon: "I",
+      type: "btn",
     },
     {
       tool: "Underline",
       icon: "U",
+      type: "btn",
     },
     {
       tool: "Text-Color",
       icon: "A",
+      type: "input",
     },
     {
       tool: "Font-size",
       icon: "12",
+      type: "input",
     },
   ];
   const [selectionTool, setSelectionTool] = useState<Array<string>>([]);

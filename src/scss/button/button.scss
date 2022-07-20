@@ -17,4 +17,13 @@
       color: $primary-color;
     }
   } 
+
+  &.palette-btn-input {
+    box-shadow: 1px 1px 3px #aaaaaa;
+  }
+}
+
+.font-size-input {
+  padding: 0.1rem 0.35rem;
+
 }

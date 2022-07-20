@@ -4,12 +4,14 @@ type ButtonProps = {
   children: JSX.Element;
   selectionTool: Array<string | undefined>;
   tool: string | undefined;
+  type: string | undefined;
   onClick: () => void;
 };
 
 function ButtonComponent({
   children,
   tool,
+  type,
   selectionTool,
   onClick,
 }: ButtonProps): ReactElement {
@@ -19,7 +21,8 @@ function ButtonComponent({
       onClick={onClick}
       className={`button palette-btn button-hover ${
         selectionTool.includes(tool) ? "active" : ""
-      }`}
+      } ${type === "input" ? "palette-btn-input" : ""}
+      `}
     >
       {children}
     </button>
